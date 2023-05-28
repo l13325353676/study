@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        table {
+            margin: 50px auto;
+            text-align: center;
+            /* border: 1px solid #333; */
+        }
+        caption {
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        table, th,td {
+            border-collapse: collapse;
+            border: 1px solid #333;
+            
+        }
+        table  th {
+            padding: 0 30px;
+            background-color: #ddd;
+        }
+        table tr:hover {
+            background-color: pink;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h2>学生信息</h2>
+    <p>将学生信息渲染到表格中...</p>
+    <table>
+        <caption>学生信息</caption>
+        <tr>
+            <th>序号</th>
+            <th>姓名</th>
+            <th>年龄</th>
+            <th>性别</th>
+            <th>家乡</th>
+        </tr>
+        <script>
+            let student = [ {name:'小明',	age:'19',	gander:'男' ,home:'河北省'},
+                            {name:'小红',	age:'15',	gander:'男'	,home:'河北省'},
+                            {name:'小刚',	age:'18',	gander:'女'	,home:'河北省'},
+                            {name:'小强',	age:'16',	gander:'男'	,home:'河北省'},
+                            {name:'小李',	age:'17',	gander:'女'	,home:'河北省'}
+            ]
+            for (let k = 0; k < student.length; k++) {
+            document.write(`<tr>
+                                <td>${k+1}</td>
+                                <td>${student[k].name}</td>
+                                <td>${student[k].age}</td>
+                                <td>${student[k].gander}</td>
+                                <td>${student[k].home}</td>
+                                
+                            </tr>`)
+                        }
+                                </script>
+        
+    </table>
+</body>
+</html>
